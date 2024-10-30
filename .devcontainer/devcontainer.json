@@ -1,0 +1,16 @@
+{
+    "name": "Next.js Dev Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/app",
+    "customizations": {
+      "settings": {
+      "terminal.integrated.shell.linux": "/bin/sh"
+    },
+      "extensions": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
+    }
+  }
+  
