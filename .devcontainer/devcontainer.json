@@ -5,7 +5,7 @@
     "workspaceFolder": "/app",
     "customizations": {
       "settings": {
-      "terminal.integrated.shell.linux": "/bin/sh"
+      "terminal.integrated.shell.linux": "/bin/bash"
     },
       "extensions": [
       "esbenp.prettier-vscode",

@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
+import { profileImg } from "@/public/assets";
 const Banner = () => {
   return (
     <section
       id="home"
       className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
+      <motion.img
+        src={profileImg.src} // Remplace par le chemin de l'image
+        alt="profileImg"
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-full w-48 h-48 mx-auto"
+      />
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -19,9 +28,9 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
       >
-        Noor Mohammad.
+        FOMBA SOULEYMANE.
         <span className="text-textDark mt-2 lgl:mt-4">
-          I build things for the web.
+         Je crée des solutions data-driven.
         </span>
       </motion.h1>
       <motion.p
@@ -30,19 +39,12 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        I am a web developer with 4+ years of experience in React. I have a
-        strong foundation in front-end & back-end development and am skilled in
-        creating user-friendly and responsive web applications using React and
-        its ecosystem.{" "}
-        <a href="https://www.noormohammad.live/" target="_blank">
-          {" "}
-          <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
-            Learn more
-            <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
-          </span>
-        </a>
+        Je suis Ingénieur data avec une expérience dans les pipelines de données, 
+        les processus ETL et les technologies Big Data. Compétent en conception 
+        d'architectures de données évolutives et en mise en œuvre de solutions de 
+        traitement des données efficaces.
       </motion.p>
-      <a href="https://github.com/noorjsdivs" target="_blank">
+      <a href="https://github.com/SOUlEYMANEFOMBA" target="_blank">
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
