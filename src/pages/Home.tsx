@@ -72,6 +72,15 @@ const Home: React.FC = () => {
               height="extraLarge"
               dividerStyle="solid"
             />
+            <LazyAboutMe />
+              <Divider
+                thickness="0.25rem"
+                direction="inner-left-to-middle"
+                color="lightblue"
+                height="middle"
+                dividerStyle="solid"
+              />
+
             <ProjectSlider />
             <div className="relative -mb-24 pb-32 -mt-10">
               <LazyRadialGradient
@@ -86,16 +95,6 @@ const Home: React.FC = () => {
                 height="middle"
                 dividerStyle="solid"
               />
-
-              <LazyAboutMe />
-              <Divider
-                thickness="0.25rem"
-                direction="inner-left-to-middle"
-                color="lightblue"
-                height="middle"
-                dividerStyle="solid"
-              />
-
               <LazyContact />
             </div>
           </Suspense>

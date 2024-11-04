@@ -42,14 +42,14 @@ const Contact: React.FC = () => {
     try {
       const response = await axios.post(apiBaseUrl, data);
       console.log(response);
-      if (language === "DE") {
+      if (language === "FR") {
         toast.success(toastMessages.successEmailSent.de);
       } else {
         toast.success(toastMessages.successEmailSent.en);
       }
     } catch (error) {
       console.log(error);
-      if (language === "DE") {
+      if (language === "FR") {
         toast.error(toastMessages.failedEmailSent.de);
       } else {
         toast.error(toastMessages.failedEmailSent.en);
@@ -191,12 +191,12 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           >
             <p className="text-[--black] mb-6">
               <span className="text-[--orange]">&lt;</span>
-              {language === "DE" ? contactData.title.de : contactData.title.en}
+              {language === "FR" ? contactData.title.de : contactData.title.en}
               <span className="text-[--orange]">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center">
-              {language === "DE"
+              {language === "FR"
                 ? contactData.description.de
                 : contactData.description.en}
             </h2>
@@ -232,7 +232,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 key={index}
                 type={input.type}
                 placeholder={
-                  language === "DE"
+                  language === "FR"
                     ? `${input.placeholder.de}`
                     : `${input.placeholder.en}`
                 }
@@ -266,7 +266,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
             <textarea
               rows={contactData.textarea.rows}
               placeholder={
-                language === "DE"
+                language === "FR"
                   ? `${contactData.textarea.placeholder.de}`
                   : `${contactData.textarea.placeholder.en}`
               }
@@ -300,19 +300,19 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 <span className="checkbox"></span>
               </label>
               <p>
-                {language === "DE"
+                {language === "FR"
                   ? `${contactData.privacyOptIn.checkbox.de}`
                   : `${contactData.privacyOptIn.checkbox.en}`}
               </p>
             </div>
             <p>
-              {language === "DE"
+              {language === "FR"
                 ? `${contactData.privacyOptIn.description.de}`
                 : `${contactData.privacyOptIn.description.en}`}
             </p>
             <Button
               value={
-                language === "DE"
+                language === "FR"
                   ? `${contactData.button.value.de}`
                   : `${contactData.button.value.en}`
               }

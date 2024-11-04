@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
 import {
-  skillsDataCMS,
   skillsDataDesign,
   skillsDataWeb,
 } from "../assets/lib/data";
@@ -48,7 +47,7 @@ const TechStack: React.FC = () => {
               <span className="text-[--orange]">/&gt;</span>
             </p>
             <h2>
-              {language === "DE"
+              {language === "FR"
                 ? "Meine Techstack und Skills"
                 : "My TechStack and Skills"}
             </h2>
@@ -60,7 +59,6 @@ const TechStack: React.FC = () => {
           </div>
           <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
             <SkillSection skillsData={skillsDataDesign} theme={theme} />
-            <SkillSection skillsData={skillsDataCMS} theme={theme} />
           </div>
         </div>
       </section>

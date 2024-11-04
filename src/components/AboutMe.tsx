@@ -13,7 +13,7 @@ import { useLanguage } from "../context/language-context";
 const AboutMe: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
-  const { ref } = useSectionInView("About me");
+  const { ref } = useSectionInView("Experience");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -32,7 +32,7 @@ const AboutMe: React.FC = () => {
     }
   };
   const paragraphs =
-    language === "DE" ? aboutMeData.paragraphs_DE : aboutMeData.paragraphs_EN;
+    language === "FR" ? aboutMeData.paragraphs_DE : aboutMeData.paragraphs_EN;
 
   return (
     <React.Fragment>
@@ -48,12 +48,12 @@ const AboutMe: React.FC = () => {
           >
             <p className="text-[--black] mb-6">
               <span className="text-orange">&lt;</span>
-              {language === "DE" ? aboutMeData.title : aboutMeData.title_EN}
+              {language === "FR" ? aboutMeData.title : aboutMeData.title_EN}
               <span className="text-orange">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center max-lg:text-left break-words">
-              {language === "DE"
+              {language === "FR"
                 ? aboutMeData.description
                 : aboutMeData.description_EN}
             </h2>
