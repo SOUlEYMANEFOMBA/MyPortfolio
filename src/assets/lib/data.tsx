@@ -5,6 +5,7 @@ import postgres from "../../assets/icons/PostgresSQL.svg";
 import airflow from "../../assets/icons/ApacheAirflow.svg";
 import spark from "../../assets/icons/sparkicon.svg";
 import powerBi from "../../assets/icons/powerBiicon.svg";
+import vegalite from "../../assets/icons/vegalite.svg";
 import excel from "../../assets/icons/excelIcon.svg";
 import java from "../../assets/icons/Java.svg";
 import aws from "../../assets/icons/awsicon.svg";
@@ -14,8 +15,6 @@ import tastyMockup from "../../assets/img/data_engineering_architecture_kafka.pn
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/ETL_process.png";
 import profilepicture from "../img/me2.png";
-import caricon from "../../assets/icons/car-icon.svg";
-import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
@@ -182,6 +181,24 @@ export const skillsDataWeb = [
         icon: aws,
         color: "#449C45",
       },
+      {
+        title: "Apache Airflow",
+        hash: "#Airflow",
+        icon: airflow,
+        color: "#449C45",
+      },
+      {
+        title: "PostgresSQL",
+        hash: "#PosgresSQL",
+        icon: postgres,
+        color: "#449C45",
+      },
+      {
+        title: "Python",
+        hash: "#Python",
+        icon: python,
+        color: "#449C45",
+      },
       
     ],
   },
@@ -200,6 +217,7 @@ export const skillsDataDesign = [
       },
       { title: "Python", hash: "#Python", icon: python, color: "#00C4CC" },
       { title: "Excel", hash: "#Excel", icon: excel, color: "#00C4CC" },
+      { title: "VegaLite", hash: "#VegaLite", icon: vegalite, color: "#00C4CC" },
     ],
   },
 ] as const;
@@ -207,10 +225,9 @@ export const skillsDataDesign = [
 export const navLinks = [
   { fr: "Home", en: "Home", hash: "#home", icon: GoHome },
   { fr: "Compétences", en: "Skills", hash: "#skills", icon: GoStack },
-  { fr: "Experience", en: "Experience", hash: "#about-me", icon: GoPerson },
+  { fr: "Expérience", en: "Experience", hash: "#about-me", icon: GoPerson },
   { fr: "Projects", en: "Projects", hash: "#projects", icon: GoProject },
   { fr: "Contact", en: "Contact", hash: "#contact", icon: GoMail },
-  { fr: "CV", en: "Resume", hash: "#contact", icon: GoMail },
 ] as const;
 
 export const FooterLinks = [
@@ -254,49 +271,67 @@ export const quotesData = [
 ] as const;
 
 export const aboutMeData = {
-  title: "A propos De Moi",
-  title_EN: "About me",
-  description: "Ein paar Codeschnippsel über mich",
-  description_EN: "A few code snippets about me",
+  title: "Expérience",
+  title_EN: "Experience",
+  description: "Un aperçu de mon parcours professionnel",
+  description_EN: "An overview of my professional journey",
   paragraphs_DE: [
     {
-      title: "Die Schaltkreise meines Herzens",
-      description:
-        "Wenn ich nicht in der digitalen Welt unterwegs bin, durchstreife ich die faszinierende Welt der Technik und Hardware. Schaltkreise und Lötstellen sind für mich wie Puzzleteile eines aufregenden Abenteuers.",
+      title: "Engineer Data",
+      company:"@CGI",
+      period: "Mars 2024 - Août 2024",
+      tasks: [
+        "J'ai été en charge du développement d'un bot d'échecs en Python utilisant Stockfish, permettant une simulation précise du comportement des joueurs.",
+        "J'ai conçu et mis en place un pipeline de streaming de données avec Kafka pour l'ingestion, Spark pour le traitement, et PostgreSQL pour le stockage, optimisant l'analyse des données de simulation en temps réel.",
+        "J'ai analysé les données des parties simulées pour identifier les facteurs influençant le classement des joueurs et développé un tableau de bord interactif pour suivre et analyser les performances individuelles et collectives.",
+        "Présentation du jeu prévue au DevFest de Nantes en octobre 2024, avec des retours attendus des participants.",
+      ],
+      tools: "Python, Java, Docker",
       icon: hardwareicon,
     },
     {
-      title: "Auf der Überholspur des Lebens",
-      description:
-        "Neben dem Coden befinde ich mich gerne auf der Überholspur – im wahrsten Sinne des Wortes. Autos sind meine Leidenschaft, und ich genieße es, mit PS-starken Maschinen auf unbekannten Straßen unterwegs zu sein.",
-      icon: caricon,
-    },
-    {
-      title: "Entdeckungsfreude als Lebensmotto",
-      description:
-        "Meine Reise als Webentwickler ist nur ein Teil meines Lebenswegs. Ich lebe nach dem Motto, dass das Abenteuer erst beginnt, wenn man das Bekannte hinter sich lässt. Das Entdecken neuer Orte ist meine Form der kreativen Inspiration.",
-      icon: travelicon,
+      title: "Engineer data",
+      company: "LafargeHolcim",
+      period: "Avril 2022 - Août 2022",
+      topic: "Mise en place d'un modèle de prévision de la demande de ciment pour les prochaines années.",
+      tasks: [
+        "J'ai réalisé une analyse des données pour identifier les variables et les règles de corrélation, définissant les fondations du modèle de prévision.",
+        "J'ai mis en place un modèle économétrique de prévision de la demande en ciment, avec une erreur de précision de moins de 1%.",
+        "J'ai été en charge de la mise en place des outils pour évaluer la qualité et la pertinence des données internes et externes, augmentant la précision des prévisions.",
+        "J'ai mis en œuvre un processus de mise à jour du modèle, réduisant les erreurs de prévision.",
+      ],
+      tools:  "Python, R, RShiny",
+      icon: hardwareicon,
     },
   ],
   paragraphs_EN: [
     {
-      title: "The Circuits of My Heart",
-      description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
+      title: "Data Engineer",
+      company: "@CGI",
+      period: "March 2024 - August 2024",
+      tasks: [
+        "Led the development of a chess bot in Python using Stockfish, enabling accurate simulation of player behavior.",
+        "Designed and implemented a data streaming pipeline with Kafka for ingestion, Spark for processing, and PostgreSQL for storage, optimizing real-time analysis of simulation data.",
+        "Analyzed simulated game data to identify factors influencing player rankings and developed an interactive dashboard to track and analyze individual and team performances.",
+        "Planned presentation of the game at DevFest Nantes in October 2024, with expected feedback from participants.",
+      ],
+      tools: "Python, Java, Docker",
       icon: hardwareicon,
     },
     {
-      title: "On the Fast Lane of Life",
-      description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
-    },
-    {
-      title: "The Joy of Discovery as a Life Motto",
-      description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
-    },
+      title: "Data Engineer",
+      company: "@LafargeHolcim",
+      period: "April 2022 - August 2022",
+      topic: "Development of a cement demand forecasting model for the upcoming years.",
+      tasks: [
+        "Conducted data analysis to identify variables and correlation rules, establishing the foundations of the forecasting model.",
+        "Implemented an econometric forecasting model for cement demand, achieving a precision error of less than 1%.",
+        "Led the setup of tools to evaluate the quality and relevance of internal and external data, increasing forecast accuracy.",
+        "Established a model update process, reducing forecasting errors.",
+      ],
+      tools: "Python, R, RShiny",
+      icon: hardwareicon,
+    }
   ],
 };
 

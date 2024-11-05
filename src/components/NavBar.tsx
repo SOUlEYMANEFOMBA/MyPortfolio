@@ -73,21 +73,6 @@ const NavBar: React.FC = () => {
         /&gt;
       </span>
     );
-
-    const handleDownloadCV = () => {
-      const fileUrl = language === "FR" ? "/cv_fr.pdf" : "/resume_en.pdf";
-      window.open(fileUrl, "_blank");
-    };
-
-    // const handleClick = () => {
-    //   if (linkEn=== "Resume") {
-    //     handleDownloadCV();
-    //   } else {
-    //     setActiveSection(linkEn);
-    //     setTimeOfLastClick(Date.now());
-    //   }
-    // };
-
     return (
       <NavLink
         to={link}
@@ -104,34 +89,6 @@ const NavBar: React.FC = () => {
       </NavLink>
     );
   };
-
-//   return (
-//     <NavLink
-//       to={link}
-//       onMouseEnter={() => setIsHovered(true)}
-//       onMouseLeave={() => setIsHovered(false)}
-//       className={`relative ${linkClasses}`}
-//       aria-aria-current={link}
-//       // Vérifie si le lien est pour le CV/Resume et ajoute un gestionnaire d'événement pour le téléchargement
-//       onClick={(e) => {
-//         if (linkEn === "Resume") {
-//           e.preventDefault(); // Empêche la navigation par défaut pour déclencher le téléchargement
-//           handleDownloadCV(); // Appelle la fonction de téléchargement du CV
-//         } else {
-//           setActiveSection(linkEn);
-//           setTimeOfLastClick(Date.now());
-//         }
-//       }}
-//     >
-//       <span>
-//         {leftArrow}
-//         {children}
-//         {rightArrow}
-//       </span>
-//     </NavLink>
-//   );
-// };
-
   return (
     <React.Fragment>
       <ScrollToAnchor />

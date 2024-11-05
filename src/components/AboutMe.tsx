@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import me from "../assets/img/me.webp";
+import me from "../assets/img/Work.svg";
 import { aboutMeData } from "../assets/lib/data";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { TiArrowForward } from "react-icons/ti";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -81,7 +82,30 @@ const AboutMe: React.FC = () => {
               <SwiperSlide
                 className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-10 cursor-grab"
                 key={index}
-              >
+              > 
+                <h3 className="flex gap-1 font-medium text-3xl font-titleFont">
+                  {paragraph.title}
+                  <span className="text-textGreen text-3xl tracking-wide">
+                    {paragraph.company}
+                  </span>
+                </h3>
+                <p className="mt-1 font-medium text-3xl text-white">
+                  {paragraph.period}
+                </p>
+                <ul className="mt-6 flex flex-col text-3xl gap-3">
+                  {paragraph.tasks.map((task, idx) => (
+                    <li className="flex gap-2 text-3xl text-textDark" key={idx}>
+                      <span className="text-textGreen mt-1">
+                        <TiArrowForward />
+                      </span>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+                <p className="flex gap-2 text-white text-3xl mt-4">
+                  <span className="text-textGreen text-3xl mt-1 text-white">Outils:</span>
+                  {paragraph.tools}
+                </p>
                 <div className="flex gap-6 flex-row justify-start items-center max-lg:flex-col max-lg:justify-center max-lg:text-center ">
                   <div>
                     <img
@@ -94,7 +118,7 @@ const AboutMe: React.FC = () => {
                     <h2>{paragraph.title}</h2>
                   </div>
                 </div>
-                <div className="flex flex-row gap-10 max-lg:flex-col">
+                {/* <div className="flex flex-row gap-10 max-lg:flex-col">
                   <div className="flex flex-col gap-4 items-center justify-between -mt-10 -mb-10 max-lg:flex-row max-lg:m-0">
                     <p className="text-white">
                       <span className="text-orange">&lt;</span>h3
@@ -115,7 +139,7 @@ const AboutMe: React.FC = () => {
                       {paragraph.description}
                     </p>
                   </div>
-                </div>
+                </div> */}
               </SwiperSlide>
             ))}
             <div

@@ -135,7 +135,7 @@ export default function LiveTicker() {
           >
             <span className="text-[--orange]">&lt;</span>
             {language === "FR"
-              ? liveTickerData.content.de
+              ? liveTickerData.content.fr
               : liveTickerData.content.en}
             <span className="text-[--orange]">/&gt;</span>
           </Link>
