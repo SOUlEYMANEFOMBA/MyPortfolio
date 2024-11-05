@@ -118,7 +118,6 @@ export const projectsData = [
       { name: "PowerBi", icon: powerBi },
     ],
     image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
     githuburl: "https://github.com/AlpayC/Furniture_MERN",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -225,7 +224,7 @@ export const skillsDataDesign = [
 export const navLinks = [
   { fr: "Home", en: "Home", hash: "#home", icon: GoHome },
   { fr: "Compétences", en: "Skills", hash: "#skills", icon: GoStack },
-  { fr: "Expérience", en: "Experience", hash: "#about-me", icon: GoPerson },
+  { fr: "Expériences", en: "Experiences", hash: "#experiences", icon: GoPerson },
   { fr: "Projects", en: "Projects", hash: "#projects", icon: GoProject },
   { fr: "Contact", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
@@ -260,13 +259,13 @@ export const sideBarLeftSocials = [
 
 export const quotesData = [
   {
-    fr: '"Es ist überhaupt nicht wichtig, es beim ersten Mal richtig zu machen. Es ist entscheidend, es beim letzten Mal richtig zu machen."',
-    en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Andrew Hunt",
+    fr: `"Les données sont le nouveau pétrole. Mais comme le pétrole, les données doivent être raffinées pour devenir utiles."`,
+    en: `"Data is the new oil. But like oil, data must be refined to be useful."`,
+    author: "D. J. Patil",
   },
   {
-    fr: '"Das Web ist wie eine Leinwand und der Code ist die Farbe. Erschaffe dein Meisterwerk."',
-    en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
+    fr: '"Je suis actuellement à la recherche de nouvelles opportunités, donc ma boîte de réception est ouverte !"',
+    en: `"I am currently looking for new opportunities, so my inbox is open! Whether you have questions or just want to say hello."`,
   },
 ] as const;
 
@@ -286,7 +285,6 @@ export const aboutMeData = {
         "J'ai analysé les données des parties simulées pour identifier les facteurs influençant le classement des joueurs et développé un tableau de bord interactif pour suivre et analyser les performances individuelles et collectives.",
         "Présentation du jeu prévue au DevFest de Nantes en octobre 2024, avec des retours attendus des participants.",
       ],
-      tools: "Python, Java, Docker",
       icon: hardwareicon,
     },
     {
@@ -300,7 +298,6 @@ export const aboutMeData = {
         "J'ai été en charge de la mise en place des outils pour évaluer la qualité et la pertinence des données internes et externes, augmentant la précision des prévisions.",
         "J'ai mis en œuvre un processus de mise à jour du modèle, réduisant les erreurs de prévision.",
       ],
-      tools:  "Python, R, RShiny",
       icon: hardwareicon,
     },
   ],
@@ -315,7 +312,6 @@ export const aboutMeData = {
         "Analyzed simulated game data to identify factors influencing player rankings and developed an interactive dashboard to track and analyze individual and team performances.",
         "Planned presentation of the game at DevFest Nantes in October 2024, with expected feedback from participants.",
       ],
-      tools: "Python, Java, Docker",
       icon: hardwareicon,
     },
     {
@@ -329,7 +325,6 @@ export const aboutMeData = {
         "Led the setup of tools to evaluate the quality and relevance of internal and external data, increasing forecast accuracy.",
         "Established a model update process, reducing forecasting errors.",
       ],
-      tools: "Python, R, RShiny",
       icon: hardwareicon,
     }
   ],
@@ -341,19 +336,19 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    fr: "Schreib mir eine Nachricht und ich melde mich bei dir.",
+    fr: "Écrivez-moi un message et je vous répondrai.",
     en: "Write me a message and I will get back to you.",
   },
   inputfields: [
     {
       name: "name",
       placeholder: {
-        fr: "Dein Name",
+        fr: "Votre Nom",
         en: "Your Name",
       },
       type: "text",
       validation: {
-        fr: "Bitte gebe deinen Namen ein",
+        fr: "Veuillez entrer votre nom.",
         en: "Please fill in your name",
       },
       pattern: "{2}",
@@ -361,12 +356,12 @@ export const contactData = {
     {
       name: "email",
       placeholder: {
-        fr: "Deine E-Mail Adresse",
+        fr: "Votre Adresse E-Mail",
         en: "Your E-Mail",
       },
       type: "email",
       validation: {
-        fr: "Bitte gebe deine Email ein",
+        fr: "Veuillez entrer votre adresse email",
         en: "Please fill in your email",
       },
       pattern: "[@]{4}",
@@ -374,12 +369,12 @@ export const contactData = {
     {
       name: "subject",
       placeholder: {
-        fr: "Deine Betreff",
+        fr: "Object",
         en: "Your Subject",
       },
       type: "text",
       validation: {
-        fr: "Bitte gebe einen Betreff ein",
+        fr: "Veuillez écrire votre Object",
         en: "Please fill in your subject",
       },
       pattern: "{10}",
@@ -387,20 +382,20 @@ export const contactData = {
   ],
   textarea: {
     placeholder: {
-      fr: "Deine Nachricht",
+      fr: "Votre Message",
       en: "Your Message",
     },
     name: "message",
     rows: 10,
     validation: {
-      fr: "Bitte gebe deine Nachricht ein",
+      fr: "Veuillez écrire votre Message",
       en: "Please fill in your message",
     },
     pattern: "{10}",
   },
   button: {
     value: {
-      fr: "Absenden",
+      fr: "Envoyer",
       en: "Send",
     },
   },
@@ -413,11 +408,11 @@ export const contactData = {
   },
   privacyOptIn: {
     checkbox: {
-      fr: "Ich stimme zu, dass Alpay meine personenbezogenen Daten (Name und E-Mail-Adresse) verwenden darf, um mit mir Kontakt aufzunehmen.",
+      fr: "J'accepte que Souleymane puisse utiliser mes données personnelles (nom et adresse e-mail) pour me contacter.",
       en: "I agree that Alpay may use my personal data (name and e-mail address) to contact me.",
     },
     description: {
-      fr: "Durch Übermittlung dieser Anfrage bestätigen Sie, dass Sie die Datenschutzerklärung gelesen haben",
+      fr: "En soumettant cette demande, vous reconnaissez avoir pris connaissance de la politique privée",
       en: "By submitting this request, you acknowledge that you have read the Private Policy",
     },
   },
@@ -425,19 +420,19 @@ export const contactData = {
 
 export const toastMessages = {
   loadingProject: {
-    fr: "🦄 Die Live Demo wird gleich geöffnet. Server werden gestartet...",
-    en: "🦄 The live demo will open shortly. Starting servers...",
+    fr: " La démonstration en direct ouvrira bientôt. Démarrage des serveurs...",
+    en: " The live demo will open shortly. Starting servers...",
   },
   successEmailSent: {
-    fr: "🦄 Vielen Dank für deine Email. Ich werde mich schnellstmöglich bei dir melden",
-    en: "🦄 Thank you for your email. I will get back to you as soon as possible",
+    fr: "Merci pour votre e-mail. Je vous répondrai dès que possible.",
+    en: "Thank you for your email. I will get back to you as soon as possible",
   },
   failedEmailSent: {
-    fr: "🦄 Leider hat der Versand deiner Email nicht geklappt. Bitte versuche es später noch einmal",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later",
+    fr: "Malheureusement, l'envoi de votre e-mail n'a pas fonctionné. Veuillez réessayer plus tard.",
+    en: "Unfortunately the sending of your email did not work. Please try again later",
   },
   failedValidationName: {
-    f: "Bitte gebe deinen Namen ein",
+    f: "Veuillez entrer votre Nom",
     en: "Please fill in your name",
   },
 } as const;

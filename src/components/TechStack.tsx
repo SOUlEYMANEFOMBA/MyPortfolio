@@ -48,7 +48,7 @@ const TechStack: React.FC = () => {
             </p>
             <h2>
               {language === "FR"
-                ? "Meine Techstack und Skills"
+                ? "Mes Compétance"
                 : "My TechStack and Skills"}
             </h2>
           </motion.div>

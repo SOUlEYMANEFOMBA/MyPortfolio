@@ -59,12 +59,6 @@ const Home: React.FC = () => {
               height="middle"
               dividerStyle="solid"
             />
-
-            <LazyBannerQuote
-              style={"noBG"}
-              quoteIndex={1}
-              containerType="statement"
-            />
             <Divider
               thickness="0.25rem"
               direction="middle"
@@ -94,6 +88,11 @@ const Home: React.FC = () => {
                 color="lightblue"
                 height="middle"
                 dividerStyle="solid"
+              />
+              <LazyBannerQuote
+              style={"noBG"}
+              quoteIndex={1}
+              containerType="statement"
               />
               <LazyContact />
             </div>

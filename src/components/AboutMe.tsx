@@ -14,7 +14,7 @@ import { useLanguage } from "../context/language-context";
 const AboutMe: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experiences");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -102,10 +102,6 @@ const AboutMe: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <p className="flex gap-2 text-white text-3xl mt-4">
-                  <span className="text-textGreen text-3xl mt-1 text-white">Outils:</span>
-                  {paragraph.tools}
-                </p>
                 <div className="flex gap-6 flex-row justify-start items-center max-lg:flex-col max-lg:justify-center max-lg:text-center ">
                   <div>
                     <img

@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Button from "./Button";
 import axios from "axios";
-import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
@@ -43,14 +42,14 @@ const Contact: React.FC = () => {
       const response = await axios.post(apiBaseUrl, data);
       console.log(response);
       if (language === "FR") {
-        toast.success(toastMessages.successEmailSent.de);
+        toast.success(toastMessages.successEmailSent.fr);
       } else {
         toast.success(toastMessages.successEmailSent.en);
       }
     } catch (error) {
       console.log(error);
       if (language === "FR") {
-        toast.error(toastMessages.failedEmailSent.de);
+        toast.error(toastMessages.failedEmailSent.fr);
       } else {
         toast.error(toastMessages.failedEmailSent.en);
       }
@@ -107,42 +106,42 @@ const Contact: React.FC = () => {
     setLastUpdatedField(name);
   };
 
-  const [cursorBlink, setCursorBlink] = useState<boolean>(true);
+  // const [ setCursorBlink] = useState<boolean>(true);
 
-  useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      setCursorBlink((prev) => !prev);
-    }, 400);
+  // useEffect(() => {
+  //   const blinkInterval = setInterval(() => {
+  //     setCursorBlink((prev) => !prev);
+  //   }, 400);
 
-    return () => {
-      clearInterval(blinkInterval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(blinkInterval);
+  //   };
+  // }, []);
 
-  const codeSnippet = `
-import  { useState } from "react";
+//   const codeSnippet = `
+// import  { useState } from "react";
 
-// 🌈 Spreading Stardust: 
-// Crafting Cosmic Email 🌌
+// // 🌈 Spreading Stardust: 
+// // Crafting Cosmic Email 🌌
 
-const [sender, setSender] = "${name}${
-    lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
-  }🚀";
-const [recipient, setRecipient] = "${email}${
-    lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
-  }📧";
-const [subject, setSubject] = \n"${subject}${
-    lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
-const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
-Across the cosmos, a message for you:\n
-"${wordWrap(message, 40, " ")}${
-    lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
-Wishing you stardust dreams,\n
-${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
-\``;
+// const [sender, setSender] = "${name}${
+//     lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
+//   }🚀";
+// const [recipient, setRecipient] = "${email}${
+//     lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
+//   }📧";
+// const [subject, setSubject] = \n"${subject}${
+//     lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
+//   }✨";
+// const [message, setMessage] = 
+// \`Hello, intrepid traveler! 👋\n
+// Across the cosmos, a message for you:\n
+// "${wordWrap(message, 40, " ")}${
+//     lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
+//   }"\n
+// Wishing you stardust dreams,\n
+// ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
+// \``;
 
   //   const codeSnippet2 = `
   // // 🚀 Initiating Quantum Email Transmission 🪐
@@ -191,21 +190,21 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           >
             <p className="text-[--black] mb-6">
               <span className="text-[--orange]">&lt;</span>
-              {language === "FR" ? contactData.title.de : contactData.title.en}
+              {language === "FR" ? contactData.title.fr : contactData.title.en}
               <span className="text-[--orange]">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center">
               {language === "FR"
-                ? contactData.description.de
+                ? contactData.description.fr
                 : contactData.description.en}
             </h2>
           </motion.div>
         </div>
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
-          <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
+          {/* <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
             <Highlight
-              code={codeSnippet}
+               code={codeSnippet}
               language="tsx"
               theme={themes.nightOwl}
             >
@@ -221,7 +220,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 </pre>
               )}
             </Highlight>
-          </div>
+          </div> */}
           <form
             className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
             onSubmit={notifySentForm}
@@ -233,7 +232,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 type={input.type}
                 placeholder={
                   language === "FR"
-                    ? `${input.placeholder.de}`
+                    ? `${input.placeholder.fr}`
                     : `${input.placeholder.en}`
                 }
                 name={input.name}
@@ -267,7 +266,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               rows={contactData.textarea.rows}
               placeholder={
                 language === "FR"
-                  ? `${contactData.textarea.placeholder.de}`
+                  ? `${contactData.textarea.placeholder.fr}`
                   : `${contactData.textarea.placeholder.en}`
               }
               name={contactData.textarea.name}
@@ -301,19 +300,19 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               </label>
               <p>
                 {language === "FR"
-                  ? `${contactData.privacyOptIn.checkbox.de}`
+                  ? `${contactData.privacyOptIn.checkbox.fr}`
                   : `${contactData.privacyOptIn.checkbox.en}`}
               </p>
             </div>
             <p>
               {language === "FR"
-                ? `${contactData.privacyOptIn.description.de}`
+                ? `${contactData.privacyOptIn.description.fr}`
                 : `${contactData.privacyOptIn.description.en}`}
             </p>
             <Button
               value={
                 language === "FR"
-                  ? `${contactData.button.value.de}`
+                  ? `${contactData.button.value.fr}`
                   : `${contactData.button.value.en}`
               }
               iconSVG={contactData.icon}
