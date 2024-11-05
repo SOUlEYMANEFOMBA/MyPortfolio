@@ -12,7 +12,7 @@ import aws from "../../assets/icons/awsicon.svg";
 import mysql from "../../assets/icons/MySQL.svg";
 import python from "../../assets/icons/Python.svg";
 import tastyMockup from "../../assets/img/data_engineering_architecture_kafka.png";
-import instorMockup from "../../assets/img/instor_mockup.webp";
+import instorMockup from "../../assets/img/dashboard.png";
 import silentmoonMockup from "../../assets/img/ETL_process.png";
 import profilepicture from "../img/me2.png";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
@@ -109,13 +109,14 @@ export const projectsData = [
    // <> second projet end here</>
   // <> third projet start here</>
   {
-    title: "Furniture Organizer",
+    title: "Mise en Place d'un Dashboard",
     description:
-      "Eine Möbel-Organizer App, die wir als Duo-Team mit React, MongoDB, Express und Node.js programmiert haben. Als Gitmaster habe ich die Verknüpfung des Frontends mit dem Backend und die Datenbankmodellierung übernommen. Die App ist responsive und mobile-optimiert.",
+      "Analyse des parties d'échecs du DevFest : étude des facteurs déterminants du classement des joueurs et création d'un tableau de bord interactif permettant le suivi et l'analyse des performances individuelles et collectives.",
     description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "DevFest Chess Game Analysis: identifying ranking factors and developing an interactive dashboard for tracking and analyzing individual and group performance.",
     technologies: [
       { name: "PowerBi", icon: powerBi },
+      {name : "Vegalite", icon:vegalite}
     ],
     image: instorMockup,
     githuburl: "https://github.com/AlpayC/Furniture_MERN",
