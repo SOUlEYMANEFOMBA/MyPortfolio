@@ -1,4 +1,4 @@
-import kafka from "../../assets/icons/apacheKafka.svg";
+import kafka from "/app/src/assets/icons/apacheKafka.svg";
 import cassandra from "../../assets/icons/Cassandra.svg";
 import docker from "../../assets/icons/docker.svg";
 import postgres from "../../assets/icons/PostgresSQL.svg";
